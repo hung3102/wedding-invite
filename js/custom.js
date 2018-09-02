@@ -8,13 +8,13 @@ $(function(){
       day: d.getDate()
   });
 
-  var $gName = $('.guess-name')
+  var $gName = $('.guest-name')
   var $inputName = $('.input-name')
   var $modal = $('#askNameModel')
   var $okBtn = $('.modal-ok')
   var $cancelBtn = $('.modal-cancel')
 
-  var splits = window.location.href.split('guess=')
+  var splits = window.location.href.split('guest=')
   if(splits.length > 1) {
     try {
       $gName.text(decodeURIComponent(splits[1]))
@@ -29,7 +29,7 @@ $(function(){
       return
     }
 
-    window.location.href = window.location.href.split('?')[0] + '?guess=' + $inputName.val()
+    window.location.href = window.location.href.split('?')[0] + '?guest=' + $inputName.val()
     //$gName.text($inputName.val())
     //$modal.toggle()
   })
