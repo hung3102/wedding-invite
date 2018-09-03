@@ -16,6 +16,15 @@
       color: #337ab7;
       font-size: 85%;
   }
+
+  .groom-name {
+    display: block;
+  }
+
+  .and-sign {
+    display: block;
+    margin: -15px 0;
+  }
 }
 
 @keyframes jump {
