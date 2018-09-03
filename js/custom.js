@@ -1,11 +1,15 @@
 $(function(){
-  var d = new Date('2018-11-26');
+  var d = new Date('2018-11-26 12:00:00');
 
   // default example
   simplyCountdown('.simply-countdown-one', {
       year: d.getFullYear(),
       month: d.getMonth() + 1,
-      day: d.getDate()
+      day: d.getDate(),
+      hours: d.getHours(),
+      minutes: d.getMinutes(),
+      seconds: d.getSeconds(),
+      enableUtc: false
   });
 
   var $gName = $('.guest-name')
