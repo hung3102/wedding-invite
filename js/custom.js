@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-  var d = new Date('2018-11-26 12:00:00');
+  var d = new Date('2018/11/26 12:00:00');
 
   // default example
   simplyCountdown('.simply-countdown-one', {
