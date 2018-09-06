@@ -1,4 +1,4 @@
-$(function(){
+document.addEventListener("DOMContentLoaded", function(event) {
   var d = new Date('2018-11-26 12:00:00');
 
   // default example
@@ -22,7 +22,7 @@ $(function(){
   if(splits.length > 1) {
     try {
       $gName.text(decodeURIComponent(splits[1]))
-    } catch {}
+    } catch(e) {}
   }
 
   if(!$gName.text()) {
@@ -41,4 +41,4 @@ $(function(){
   $cancelBtn.click(function(){
     $modal.toggle()
   })
-})
+});

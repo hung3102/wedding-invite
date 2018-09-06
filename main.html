@@ -167,50 +167,7 @@
 
   <!-- <script defer src="js/custom.js"></script> -->
   <script defer>
-    document.addEventListener("DOMContentLoaded", function(event) {
-      var d = new Date('2018-11-26 12:00:00');
-
-      // default example
-      simplyCountdown('.simply-countdown-one', {
-          year: d.getFullYear(),
-          month: d.getMonth() + 1,
-          day: d.getDate(),
-          hours: d.getHours(),
-          minutes: d.getMinutes(),
-          seconds: d.getSeconds(),
-          enableUtc: false
-      });
-
-      var $gName = $('.guest-name')
-      var $inputName = $('.input-name')
-      var $modal = $('#askNameModel')
-      var $okBtn = $('.modal-ok')
-      var $cancelBtn = $('.modal-cancel')
-
-      var splits = window.location.href.split('guest=')
-      if(splits.length > 1) {
-        try {
-          $gName.text(decodeURIComponent(splits[1]))
-        } catch {}
-      }
-
-      if(!$gName.text()) {
-          $modal.toggle()
-      }
-      $okBtn.click(function(){
-        if(!$inputName.val()) {
-          return
-        }
-
-        window.location.href = window.location.href.split('?')[0] + '?guest=' + $inputName.val()
-        //$gName.text($inputName.val())
-        //$modal.toggle()
-      })
-
-      $cancelBtn.click(function(){
-        $modal.toggle()
-      })
-    });
+      document.addEventListener("DOMContentLoaded",function(e){var t=new Date("2018-11-26 12:00:00");simplyCountdown(".simply-countdown-one",{year:t.getFullYear(),month:t.getMonth()+1,day:t.getDate(),hours:t.getHours(),minutes:t.getMinutes(),seconds:t.getSeconds(),enableUtc:!1});var n=$(".guest-name"),o=$(".input-name"),a=$("#askNameModel"),l=$(".modal-ok"),c=$(".modal-cancel"),i=window.location.href.split("guest=");if(1<i.length)try{n.text(decodeURIComponent(i[1]))}catch(e){}n.text()||a.toggle(),l.click(function(){o.val()&&(window.location.href=window.location.href.split("?")[0]+"?guest="+o.val())}),c.click(function(){a.toggle()})});
   </script>
 
   </body>
