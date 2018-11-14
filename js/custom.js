@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var splits = window.location.href.split('guest=')
   if(splits.length > 1) {
     try {
-      var name = splits[1].split('&')[0]
+      var name = splits[1].split('&')[0].replace(/\+/g, ' ')
       $gName.text(decodeURIComponent(name))
     } catch(e) {}
   }
